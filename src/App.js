@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,{ Component } from 'react';
 import {Route} from 'react-router-dom';
 import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -9,7 +9,7 @@ import FormMarca from './views/FormMarca';
 import FormModelo from './views/FormModelo';
 import FormServicio from './views/FormServicio';
 import Sidenav from './components/Sidenav'
-
+import FormFiles from './views/FormFiles'
 
 
 class App extends Component {
@@ -48,6 +48,11 @@ class App extends Component {
                 </Route>
                 <Route exact path="/admin/servicio" render={() => {
                    return <FormServicio />;
+                }}>
+
+                </Route>
+                <Route exact path="/files" render={() => {
+                   return <div className ="container" ><FormFiles /></div>;
                 }}>
 
                 </Route>
